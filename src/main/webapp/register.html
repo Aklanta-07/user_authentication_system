@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+    form {
+        background: #f4f4f4;
+        padding: 30px;
+        border-radius: 8px;
+    }
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .radio-group {
+        margin-bottom: 15px;
+    }
+    .radio-group label {
+        display: inline;
+        font-weight: normal;
+        margin-right: 15px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+    .login-link {
+        text-align: center;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+    <h2>Register here</h2>
+
+   <form action="register" method="post">
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required>
+
+     <label for="fname">First Name:</label>
+     <input type="text" id="fname" name="f-name" required>
+
+     <label for="lname">Last Name:</label>
+     <input type="text" id="lname" name="l-name" required>
+
+     <label for="password">Password:</label>
+     <input type="password" id="password" name="password"  minlength="6" 
+       maxlength="20" required>
+
+     <label>Gender:</label>
+     <div class="radio-group">
+         <label><input type="radio" name="gender" value="Male" required> Male</label>
+         <label><input type="radio" name="gender" value="Female"> Female</label>
+     </div>
+
+     <button type="submit">Submit</button>
+
+     <div class="login-link">
+         <a href="index.jsp">Already have an account? Login</a>
+     </div>
+    </form>
+</body>
+</html>
